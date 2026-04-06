@@ -6,7 +6,7 @@ def create_order(user_id, amount, notifier, logger, db, user_repository):
     logger.log(f'Creating order for {email}')
    
    # TODO: validar que amount sea positivo, de lo contrario lanzar el error "Invalid amount"
-    if amount <= 0:
+    if amount < 0:
         raise ValueError("Invalid amount")
     
     order = Order(user_email=email, amount=amount, status='CREATED')
