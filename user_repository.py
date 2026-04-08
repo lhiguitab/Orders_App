@@ -1,5 +1,6 @@
 import requests
 
+"""
 class JsonPlaceholderUserRepository:
     def get_user_email(self, user_id):
         response = requests.get(
@@ -7,12 +8,12 @@ class JsonPlaceholderUserRepository:
         )
         response.raise_for_status()
         return response.json()['email']
-
 """
+
 class JsonPlaceholderUserRepository:
     def get_user_email(self, user_id):
         raise ConnectionError("User service unavailable")
-"""
+
 
 """
 class FakeUserRepository:
